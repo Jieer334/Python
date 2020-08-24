@@ -1,0 +1,31 @@
+Drop table Instructor;
+
+create table Instructor (
+ 	ins_id INT PRIMARY KEY NOT NULL,
+ 	lastname varchar(30) NOT NULL,
+ 	firstname varchar(30) NOT NULL,
+	city varchar(30),
+ 	CCODE char(2)
+ 	);
+ 	
+ Insert into Instructor
+ 	(ins_id, lastname, firstname, city, CCODE)
+ VALUES
+ 	(1,'Ahuja','Rav','Toronto','CA'),
+ 	(2,'Chong','Raul','Toronto','CA'),
+ 	(3,'Vasudevan','Hima','Chicago','US');
+ 	
+ SELECT * FROM Instructor ;
+ 	
+ SELECT firstname, lastname, city 
+ FROM Instructor 
+ Where city = 'Toronto';
+ 
+ Update Instructor
+ SET city = 'Markham'
+ Where ins_id = 2;
+ 
+ DELETE FROM Instructor 
+ Where ins_id = 2;
+ 
+ SELECT * FROM Instructor;
